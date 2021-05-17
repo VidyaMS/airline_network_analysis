@@ -1,0 +1,19 @@
+<html>
+   <body>
+       <h3> Airline Network : Select the airports to find the shortest path between them</h3>
+	<img src={{user_image}} alt="Airport network"width="1200" height="600">
+     <form action = "http://localhost:5000/predict" method = "POST">
+       <p><h3> Airport : Origin  <select  name = "AO" required = "required"</h3> />
+			{% for a in airport_list %}
+				<option value = {{a}} > {{a}} </option>
+			{% endfor %}</select></p>
+       <p> Airport : Destination <select  name = "AD" required = "required" />
+				{% for a in airport_list %}
+                                <option value = {{a}} > {{a}} </option>
+                        	{% endfor %}</select>
+				</p>
+       <p><input type = "submit" value = "submit" /></p>
+      </form>
+   </body>
+</html>
+
